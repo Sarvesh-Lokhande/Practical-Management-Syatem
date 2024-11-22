@@ -6,7 +6,7 @@ import router from "../routes/feedbackRoutes.js";
 
 const app = express();
 
-const PORT = 3000;
+const PORT = 3000||process.env.PORT;
 app.use(express.json());
 app.use("/api/v1",router) 
 
