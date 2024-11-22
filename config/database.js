@@ -7,7 +7,7 @@ dotenv.config();
 const dbConnect = async () => {
     try {
         // Use the MongoDB URL from environment variables
-        const mongodbUrl = process.env.mongodb_url;
+        const mongodbUrl = process.env.MONGODB_URL;
         console.log("MONGODB_URL from env:", process.env.MONGODB_URL);
 
         if (!mongodbUrl) {
