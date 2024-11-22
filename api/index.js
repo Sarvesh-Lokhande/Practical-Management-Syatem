@@ -10,13 +10,14 @@ const PORT = 3000||process.env.PORT;
 app.use(express.json());
 app.use("/api/v1",router) 
 dotenv.config()
-dbConnect();
+
 app.get("/", (req, res)=>{
   res.json({
     success: true,
     message: "Server Running Successfully"
   })
 })
+dbConnect();
 
 app.listen(PORT, () => {
     console.log(`Server is running at port ${PORT}`);
